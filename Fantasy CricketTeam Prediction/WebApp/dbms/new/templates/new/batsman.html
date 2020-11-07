@@ -1,0 +1,10 @@
+{% extends 'new/base.html' %}
+{% load crispy_forms_tags %}
+    {% block content %}
+    <h3>Select Batsmen</h3>
+        <form action="{%url 'new:batsman'%}" method="POST">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="Next Page" class="btn btn-success">
+        </form>
+        {% endblock %}

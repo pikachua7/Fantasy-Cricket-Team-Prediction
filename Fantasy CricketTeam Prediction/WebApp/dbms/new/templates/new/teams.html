@@ -1,0 +1,13 @@
+{% extends 'new/base.html' %}
+{% load crispy_forms_tags %}
+    {% block content %}
+    <h3>Select 2 teams</h3>
+    <form action="{%url 'new:index'%}" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        
+        <input type='submit' value='Next Page' class="btn btn-success">
+    </form>
+    {% endblock %}
+    
+  

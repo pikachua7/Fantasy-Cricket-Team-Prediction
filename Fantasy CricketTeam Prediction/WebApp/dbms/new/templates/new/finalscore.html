@@ -1,0 +1,14 @@
+{% extends 'new/base.html' %}
+{% load crispy_forms_tags %}
+    {% block content %}
+   <h3>Your Entered Team is:</h3>
+       <ol class='special'>
+       {%for i in team%}
+        <li>{{i}}</li>
+        {%endfor%}
+        </ol>
+    <h2 class="result">Your team is {{percent}}% of the best team possible</h1>
+    {%if percent < 60%}
+        <h3 class='result'>You should choose a better team</h3>
+       {%endif%}
+        {% endblock %}
